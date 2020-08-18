@@ -28,9 +28,9 @@ resource "null_resource" "name" {
     set -o errexit
     cd ${var.kustomization_source}
 
-    kustomize edit set namespace ${var.kustomization_namespace}
+    kustomize edit set namespace "${var.kustomization_namespace}"
 
-    kustomize edit set nameprefix ${var.kustomization_release_name}
+    kustomize edit set nameprefix "${var.kustomization_release_name}-"
 
     kustomize edit set image image=${var.kustomization_image_repo}:${var.kustomization_image_tag}
 
