@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: release
+  labels:
+    app.kubernetes.io/name: release
+    app.kubernetes.io/instance: instance
+    app.kubernetes.io/managed-by: Kustomize
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: dummy.host
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: release
+              servicePort: 80
