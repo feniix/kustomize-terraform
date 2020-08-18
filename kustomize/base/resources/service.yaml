@@ -4,7 +4,7 @@ metadata:
   name: release
   labels:
     app.kubernetes.io/name: release
-    app.kubernetes.io/instance: nexus
+    app.kubernetes.io/instance: instance
     app.kubernetes.io/managed-by: Kustomize
 spec:
   ports:
