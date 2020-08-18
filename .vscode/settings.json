@@ -1,5 +1,6 @@
 {
     "terraform-ls.rootModules": [
-        "kustomize"
+        "deploy_app",
+        "modules/kustomize"
     ]
 }
